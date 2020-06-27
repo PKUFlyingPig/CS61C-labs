@@ -8,17 +8,17 @@
  * C programs, and this process is identical to including this .h file with the
  * one change being:
  *
- * #include "file.h" 
+ * #include "file.h"
  * versus
  * #include <file.h>
- *	 
+ *
  * The difference is that the <> notation is for system header files and the ""
  * is for ones you provide yourself (in your local directory for instance).
- *	 
+ *
  * The header file starts off with
  * #ifndef CS61C_VECTOR_H_
  * #define CS61C_VECTOR_H_
- *	 
+ *
  * and ends with a final #endif.  This prevents the file from being included
  * more than once which could've possibly resulted in an infinite loop of
  * file inclusions.
