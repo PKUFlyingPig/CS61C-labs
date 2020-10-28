@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.14.6" version="1.0">
-This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
-<lib desc="#Wiring" name="0">
+  This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
+
+  <lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
@@ -155,8 +156,21 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(490,240)" to="(500,240)"/>
-    <wire from="(490,290)" to="(500,290)"/>
+    <wire from="(290,210)" to="(350,210)"/>
+    <wire from="(340,260)" to="(400,260)"/>
+    <wire from="(230,400)" to="(450,400)"/>
+    <wire from="(450,290)" to="(450,400)"/>
+    <wire from="(400,290)" to="(450,290)"/>
+    <wire from="(450,290)" to="(500,290)"/>
+    <wire from="(230,230)" to="(230,400)"/>
+    <wire from="(290,330)" to="(340,330)"/>
+    <wire from="(230,230)" to="(350,230)"/>
+    <wire from="(290,330)" to="(290,350)"/>
+    <wire from="(390,220)" to="(400,220)"/>
+    <wire from="(400,220)" to="(400,240)"/>
+    <wire from="(400,240)" to="(400,260)"/>
+    <wire from="(400,240)" to="(500,240)"/>
+    <wire from="(340,260)" to="(340,290)"/>
     <comp lib="0" loc="(500,240)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -173,6 +187,14 @@ end TCL_Generic;
     </comp>
     <comp lib="8" loc="(408,169)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
+    </comp>
+    <comp lib="4" loc="(340,260)" name="Register"/>
+    <comp lib="0" loc="(290,350)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="3" loc="(390,220)" name="Adder"/>
+    <comp lib="0" loc="(290,210)" name="Constant">
+      <a name="width" val="8"/>
     </comp>
   </circuit>
 </project>
