@@ -1,0 +1,51 @@
+Exercise 1
+	Scenario 1
+		1. Because the step size in bytes (which is 32) is exactly equal to the cache size		
+		2. no. because the address we access is always mapped to the first block of our cache, and since we choose the direct-mapped cache, there is only one slot in the set, so the cache has to evict its first block constantly which leads to the zero hit rate.
+		3. Change step size to 1 will increase hit rate to 50%
+
+	Scenario 2
+		1. There are 2 memory access per iteration of the inner loop
+		2. The pattern is Miss, Hit, Hit, Hit
+		3. The hit rate is 75%, which is obvious due to the pattern described in 2
+		4. The hit rate keeps going up until nearly 100%, because all the data which will be accessed have been cached, so after the first iteration, all the access will hit.
+		5. we should split the array in equal part whose size is just equal to our  cache size, and then try to access each part of the array at a time and apply all of the function to that part so we can be completely done with it before moving on, thereby keeping that part hot in the cache and not having to circle back to it later on! 
+
+	Scenario 3
+		1. L1_HR = 50%, L2_HR = 0%, Overall_HR = 50%
+		2. We have 32 accesses to L1 cache in total. 16 of them are missed.
+		3. We have 16 accesses to L2 cache in total. They are the missed accesses to L1 cache.
+		4. The block size of L2 cache. Increasing the block size of L2 will increase L2_HR.
+		5. (1) it has no effect on the L1_HR and L2_HR when we increase the number of blocks in L1. (2) the L1_HR will increase when we increase the block size of L1 cache, but the L2_HR will not be affected.
+
+Exercise 2
+	ijk: 1.337 Gflop/s
+	ikj: 0.167 Gflop/s
+	jik: 1.021 Gflop/s
+	jki: 5.423 Gflop/s
+	kij: 0.173 Gflop/s
+	kji: 2.826 Gflop/s
+
+	1. jki performs best 
+	2. Ikj performs worst
+	3. More stride in the innermost loop, the worse it is.
+
+Exercise 3
+	Part 1
+		blocksize = 20, n = 100: 0.005 ms vs 0.024 ms
+		blocksize = 20, n = 1000: 2.541 ms vs 2.708 ms
+		blocksize = 20, n = 2000: 21.099 ms vs 7.907 ms
+		blocksize = 20, n = 5000: 187.813 ms vs 47.597 ms
+		blocksize = 20, n = 10000: 978.996 ms vs 276.049 ms
+
+		1.
+		2.
+
+	Part 2
+		blocksize = 50, n = 10000: 1006.71 ms vs 184.919 ms
+		blocksize = 100, n = 10000: 1112.1 ms vs 166.499 ms
+		blocksize = 500, n = 10000: 1138.74 ms vs 152.292 ms
+		blocksize = 1000, n = 10000: 1039.38 ms vs 215.86 ms
+		blocksize = 5000, n = 10000: 1173.96 ms vs 829.044 ms
+
+		1.
